@@ -5,12 +5,12 @@
 }
 
 :root {
-    --primary: #006A50; 
-    --primary-light: #F5F5F5; 
-    --dark: #0E0E0E; 
-    --muted: #535353; 
-    --card: #F1F1F3; 
-    --border: #006A50; 
+    --primary: #006A50;
+    --primary-light: #F5F5F5;
+    --dark: #0E0E0E;
+    --muted: #535353;
+    --card: #F1F1F3;
+    --border: #006A50;
     --radius: 0.5rem
 }
 
@@ -85,7 +85,7 @@ header h1 {
 .hero-content .btn:hover {
     background-color: #005842;
     transform: translateY(-2px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .hero-img {
@@ -93,21 +93,128 @@ header h1 {
     height: auto;
 }
 
+/* Pillars of "Bangladesh 2.0" */
+.pillars {
+    max-width: 80rem;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 5rem;
+}
+
+.pillars h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.grid {
+    /* border: 1px solid green; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+
+}
+
+.card {
+    /* border: 1px solid red; */
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid #bdbcbc;
+}
+
+.card img {
+    width: 3.8rem;
+    height: 3.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--muted);
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--muted);
+}
+
 /* RESPONSIVE */
-@media (max-width: 900px) {
+@media (max-width: 576px) {
     header {
+        gap: 1rem;
         flex-direction: column;
-        gap: 2rem;
     }
-    
+
+    header h1 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    header>.btn {
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--primary);
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    /* HERO SECTION */
     .hero {
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        text-align: center;
+        margin-bottom: 2rem;
     }
 
     .hero-content {
+        max-width: 38rem;
+    }
+
+    .hero-content h2 {
+        font-size: 3rem;
+        line-height: 3.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-content .btn {
+        background-color: var(--primary);
+        color: #fff;
+        transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+
+    .hero-content .btn:hover {
+        background-color: #005842;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-img {
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Pillars of "Bangladesh 2.0" */
+    .pillars {
+        margin-top: 2.5rem;
+        margin: 1rem;
+    }
+
+    .pillars h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
         text-align: center;
     }
-}
 
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+
+    }
+
+    .card p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: var(--muted);
+    }
+}
