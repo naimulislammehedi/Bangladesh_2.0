@@ -20,3 +20,29 @@ body {
     background: var(--primary-light);
     line-height: 1.5rem;
 }
+
+/* HEADER SECTION */
+header {
+    border: 1px solid red;
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header button {
+    padding: 0.9rem 1.8rem;
+    border: 1px solid var(--primary);
+    font-size: 1.12rem;
+    font-weight: 600;
+    color: var(--primary);
+    border-radius: var(--radius);
+    cursor: pointer;
+}
