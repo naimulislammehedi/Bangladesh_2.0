@@ -77,6 +77,8 @@ header h1 {
 }
 
 .hero-content .btn {
+    flex-direction: column;
+    /* border: 1px solid red; */
     background-color: var(--primary);
     color: #fff;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
@@ -111,7 +113,6 @@ header h1 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
-
 }
 
 .card {
@@ -125,6 +126,8 @@ header h1 {
     width: 3.8rem;
     height: 3.8rem;
     margin-bottom: 1.5rem;
+    object-fit: cover;
+
 }
 
 .card h4 {
@@ -141,45 +144,63 @@ header h1 {
 }
 
 /* RESPONSIVE */
-@media (max-width: 576px) {
+/* Small → Extra small (< 576px) */
+@media only screen and (max-width: 575.8px) {
+    /* HEADER SECTION */
     header {
-        gap: 1rem;
-        flex-direction: column;
+        padding: 1rem 5rem;
+    }
+
+    header>.btn {
+        padding: 0.5rem 0.9rem;
+        font-size: 1rem;
+        font-weight: 500;
     }
 
     header h1 {
         font-size: 1.5rem;
-        font-weight: bold;
-    }
-
-    header>.btn {
-        padding: 0.5rem 1rem;
-        border: 1px solid var(--primary);
-        font-size: 0.8rem;
-        font-weight: 500;
+        margin: 0;
+        word-wrap: unset;
     }
 
     /* HERO SECTION */
     .hero {
-        flex-direction: column;
-        text-align: center;
-        margin-bottom: 2rem;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+        /* object-fit: cover; */
+    }
+
+    .hero-img img {
+        width: 25rem;
+        height: auto;
+        margin-bottom: 1.5rem;
+
     }
 
     .hero-content {
         max-width: 38rem;
+        text-align: center;
+    }
+
+    .hero-content h4 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
     }
 
     .hero-content h2 {
-        font-size: 3rem;
-        line-height: 3.5rem;
-        margin-bottom: 1.5rem;
+        /* border: 1px solid red; */
+        font-size: 2rem;
+        line-height: 2.5rem;
+        text-align: center;
     }
 
     .hero-content .btn {
         background-color: var(--primary);
         color: #fff;
         transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        font-size: 1rem;
     }
 
     .hero-content .btn:hover {
@@ -188,33 +209,37 @@ header h1 {
         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     }
 
-    .hero-img {
-        justify-content: center;
-        align-items: center;
-    }
 
     /* Pillars of "Bangladesh 2.0" */
     .pillars {
-        margin-top: 2.5rem;
-        margin: 1rem;
+        margin: 3rem 1rem;
     }
 
     .pillars h2 {
         font-size: 2rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
         text-align: center;
     }
 
     .grid {
+        /* border: 1px solid green; */
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 1.5rem;
 
     }
 
-    .card p {
-        font-size: 1rem;
-        line-height: 1.5rem;
+    .card h4 {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
         color: var(--muted);
+        font-weight: bold;
     }
 }
+
+/* Medium → Small (sm < 768px) */
+@media only screen and (min-width: 767.8px) {
+    
+    
+}
+/* Large → Medium (md < 992px) */
