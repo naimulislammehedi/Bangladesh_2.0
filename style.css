@@ -8,7 +8,7 @@
     --primary: #006A50; 
     --primary-light: #F5F5F5; 
     --dark: #0E0E0E; 
-    --muted: #2e2e2e; 
+    --muted: #535353; 
     --card: #F1F1F3; 
     --border: #006A50; 
     --radius: 0.5rem
@@ -21,9 +21,19 @@ body {
     line-height: 1.5rem;
 }
 
+.btn {
+    padding: 0.9rem 1.8rem;
+    border: 1px solid var(--primary);
+    font-size: 1.12rem;
+    font-weight: 600;
+    color: var(--primary);
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
 /* HEADER SECTION */
 header {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     max-width: 100%;
     margin: auto;
     display: flex;
@@ -37,12 +47,67 @@ header h1 {
     font-weight: bold;
 }
 
-header button {
-    padding: 0.9rem 1.8rem;
-    border: 1px solid var(--primary);
-    font-size: 1.12rem;
-    font-weight: 600;
-    color: var(--primary);
-    border-radius: var(--radius);
-    cursor: pointer;
+/* HERO SECTION */
+.hero {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 3.75rem;
+    background-color: #C6E4D6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 1.5rem;
 }
+
+.hero-content {
+    max-width: 38rem;
+}
+
+.hero-content h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--muted);
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content .btn {
+    background-color: var(--primary);
+    color: #fff;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.hero-content .btn:hover {
+    background-color: #005842;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.hero-img {
+    width: 25rem;
+    height: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+}
+
