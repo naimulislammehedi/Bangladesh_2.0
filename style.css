@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #006A50; 
+    --primary-light: #F5F5F5; 
+    --dark: #0E0E0E; 
+    --muted: #2e2e2e; 
+    --card: #F1F1F3; 
+    --border: #006A50; 
+    --radius: 0.5rem
+}
+
+body {
+    font-family: "Fira Sans", sans-serif;
+    color: var(--dark);
+    background: var(--primary-light);
+    line-height: 1.5rem;
+}
