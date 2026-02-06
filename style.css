@@ -19,6 +19,7 @@ body {
     color: var(--dark);
     background: var(--primary-light);
     line-height: 1.5rem;
+    scroll-behavior: smooth;
 }
 
 .btn {
@@ -143,9 +144,111 @@ header h1 {
     color: var(--muted);
 }
 
+
+/* The Vision of Future */
+.vision {
+    /* border: 1px solid red; */
+    max-width: 80rem;
+    margin: 5rem auto 0;
+    /* margin-top: 5rem; */
+}
+
+.vision-content {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.vision-content h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    line-height: 2.5rem;
+}
+
+.vision-content p {
+    color: var(--muted);
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+    max-width: 100%;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+.vision-card {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    padding: 2rem;
+    color: var(--muted);
+    height: 100%;
+    border-radius: 1rem;
+    margin: 1rem;
+}
+
+.vision-card img {
+    width: 4rem;
+    height: auto;
+    margin-bottom: 1.25rem;
+}
+
+.vision-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.vision-card p {
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.vision-card > .btn {
+    margin-top: auto;
+    align-content: end;
+    padding: 1rem;
+    width: 8.6rem;
+    border: none;
+}
+
+.vision-card:nth-child(1) {
+    background-color: hsla(218, 89%, 65%, 0.20);
+}
+
+.vision-card:nth-child(1) > .btn {
+    background-color: #5490F5;
+    color: #fff;
+    
+}
+
+.vision-card:nth-child(2) {
+    background-color: #C6E4D6;
+}
+
+.vision-card:nth-child(2) > .btn {
+    background-color: #09A15C;
+    color: #fff;
+}
+
+.vision-card:nth-child(3) {
+    background-color: #F7EBCF;
+}
+
+.vision-card:nth-child(3) > .btn {
+    background-color: #FFC239;
+    color: #fff;
+}
+
+
+
+
 /* RESPONSIVE */
-/* Small → Extra small (< 576px) */
-@media only screen and (max-width: 575.8px) {
+/* Medium → Small (sm < 768px) */
+@media only screen and (max-width: 767.8px) {
     /* HEADER SECTION */
     header {
         padding: 1rem 5rem;
@@ -196,19 +299,10 @@ header h1 {
         text-align: center;
     }
 
-    .hero-content .btn {
-        background-color: var(--primary);
-        color: #fff;
-        transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    .hero-content > .btn {
         font-size: 1rem;
+        padding: 0.9rem 1.4rem;
     }
-
-    .hero-content .btn:hover {
-        background-color: #005842;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    }
-
 
     /* Pillars of "Bangladesh 2.0" */
     .pillars {
@@ -224,7 +318,7 @@ header h1 {
     .grid {
         /* border: 1px solid green; */
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
 
     }
@@ -237,9 +331,58 @@ header h1 {
     }
 }
 
-/* Medium → Small (sm < 768px) */
-@media only screen and (min-width: 767.8px) {
-    
-    
+/* Small → Extra small (< 576px) */
+@media only screen and (max-width: 575.8px) {
+    /* HEADER SECTION */
+    header {
+        padding: 1rem 2rem;
+    }
+
+    /* HERO SECTION */
+    .hero-img img {
+        width: 80%;
+        height: auto;
+        margin: 0 auto 1.5rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .hero-content h4 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-content h2 {
+        /* border: 1px solid red; */
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .hero-content > .btn {
+        font-size: 0.7rem;
+        padding: 0.5rem 1rem;
+    }
+
+    /* Pillars of "Bangladesh 2.0" */
+    .pillars {
+        margin: 3rem 1rem;
+    }
+
+    .pillars h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .grid {
+        /* border: 1px solid green; */
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+
+    }
 }
-/* Large → Medium (md < 992px) */
