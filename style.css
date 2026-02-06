@@ -189,6 +189,7 @@ header h1 {
     height: 100%;
     border-radius: 1rem;
     margin: 1rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .vision-card img {
@@ -222,7 +223,13 @@ header h1 {
 .vision-card:nth-child(1) > .btn {
     background-color: #5490F5;
     color: #fff;
-    
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.vision-card:nth-child(1) > .btn:hover {
+    background-color: #4d83e0;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .vision-card:nth-child(2) {
@@ -232,6 +239,13 @@ header h1 {
 .vision-card:nth-child(2) > .btn {
     background-color: #09A15C;
     color: #fff;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.vision-card:nth-child(2) > .btn:hover {
+    background-color: #088f52;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .vision-card:nth-child(3) {
@@ -241,10 +255,48 @@ header h1 {
 .vision-card:nth-child(3) > .btn {
     background-color: #FFC239;
     color: #fff;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.vision-card:nth-child(3) > .btn:hover {
+    background-color: #fcbf30;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 
+/* QUOTE */
+.quote {
+    /* border: 1px solid red; */
+    max-width: 80rem;
+    margin: 5rem auto 0;
+    /* margin-top: 5rem; */
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    position: relative;
+    color: var(--muted);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
 
+.quote > img {
+    position: absolute;
+    /* margin-top: 1.5rem; */
+}
+
+.quote blockquote > p {
+    line-height: 1.5rem;
+    margin-top: 2rem;
+    /* color: red; */
+    margin-bottom: 0.75rem;
+}
+
+.author {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.25rem;
+    /* border: 1px solid green; */
+}
 
 /* RESPONSIVE */
 /* Medium → Small (sm < 768px) */
